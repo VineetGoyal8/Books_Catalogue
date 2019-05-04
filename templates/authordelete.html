@@ -1,0 +1,12 @@
+{% extends "main.html" %}
+{% block content %}
+<div id="form">
+<h2 style="color:white; font-weight:bolder;"> Are you sure you want to delete {{author.name}}? </h2>
+<form action="#" method = 'post'>
+    <input type='submit', value = 'Delete'>
+</form>
+</div>
+<div id="Cancel">
+<a href="/aftercatalogue"><button> Cancel </button></a>
+</div>
+{% endblock %}

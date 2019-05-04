@@ -1,0 +1,20 @@
+{% extends "main.html" %}
+{% block content %}
+<div id="form" style="margin-top: -20%">
+    <form action="#" method='post' >
+        <p class="sty">Book Name:
+            <input type="text" size='30' name='bname' placeholder="Enter Book name" required>
+        </p>
+        <p class="sty">Genre:
+            <input type="text" size='30' name='genre' placeholder="Enter genre" required>
+        </p>
+        <p class="sty">Description:
+            <input type="text" size='30' name='desc' placeholder="Enter Book Description" required>
+        </p>
+            <input type="submit" value='Submit'>
+        <a href='{{url_for('showBooks', author_id=author_id )}}'>
+    <button style="margin-top: 50%;">Cancel</button>
+    </form>
+</a>
+</form>
+{% endblock %}

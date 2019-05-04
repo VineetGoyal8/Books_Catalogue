@@ -1,0 +1,20 @@
+{% extends "main.html"%}
+{% block content %}
+
+<div id="books">
+	<h1>Books Catalogue</h1>
+</div>
+	
+	<div id="login">
+			<a href="login">Login Here</a>
+	</div>
+
+
+	<div id="authors">
+		<h1>Authors</h1>
+	</div>
+    
+	{% for j in tauthor %}
+		<p class="Styling"> {{j.name}}</p>
+	{% endfor %}
+{% endblock %}

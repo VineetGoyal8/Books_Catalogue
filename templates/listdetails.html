@@ -1,0 +1,31 @@
+{% extends "main.html"%}
+{% block content %}
+
+<div id="books">
+	<h1>Books Catalogue</h1>
+</div>
+	
+	<div id="logout">
+			<a href="{{url_for('gdisconnect')}}" id="F">Logout</a>
+	</div>
+
+	<div id="createAuthor"> 
+		<a id="creationButton" href="{{url_for('newAuthor')}}">Create New Author</a>
+	</div>
+
+
+	<div id="authors">
+		<h1>Authors</h1>
+	</div>
+    
+	{% for j in tauthor %}
+	<div class="external-case">
+		<a href="{{url_for('showBooks',author_id=j.id)}}"><p class="Styling"> {{j.name}}</p><a
+		<div class="editlinks">
+		<a href="{{url_for('editAuthor',author_id=j.id)}}" class="edit">Edit</a>&nbsp;&nbsp;
+		<a href="{{url_for('deleteAuthor',author_id=j.id)}}" class="delete">Delete</a>
+		</div>
+	</div>
+
+	{% endfor %}
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "main.html" %}
+{% block content %}
+<div id="form">
+<h2 style="color:white; font-weight:bolder;"> Are you sure you want to delete {{book.name}}? </h2>
+<form action="#" method = 'post'>
+    <input type='submit', value = 'Delete' , style="margin-left: 15%">
+</form>
+</div>
+<div id="Cancel">
+<a href='{{url_for('showBooks', author_id=author_id )}}'>
+    <button style="margin-top: 10%">Cancel</button>
+</a>
+</div>
+{% endblock %}

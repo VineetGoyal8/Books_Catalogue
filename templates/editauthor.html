@@ -1,0 +1,11 @@
+{% extends "main.html" %}
+{% block content %}
+<div id="form">
+    <form action="{{url_for('editAuthor',author_id=author.id)}}" method='post'>
+        <p id="author-name">Author Name:
+            <input type="text" size='30' name='name' placeholder="Enter Author name" required>
+        </p>
+            <input type="submit" value='Submit'>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "main.html" %}
+{% block content %}
+<div class="f">
+<a href="{{url_for('newBook',author_id=author.id)}}" class="f1">Add New Book</a>
+</div>
+         
+
+         <div ><br><br><p class="Styling" style="color:#e6891d; font-weight:bolder;border:3px solid darkturquoise">{{author.name}}</p></div>
+<br>
+<br>
+<br>
+<br>
+
+    {% for j in book %}
+        <p class="Styling"> {{j.bname}}</p>
+        <p class="Styling"> {{j.genre}}</p>
+        <p class="Styling"> {{j.desc}} </p>
+        <div class="editLinks" style="margin-left: 10%">
+        <a href="{{url_for('editBook',author_id=author.id,book_id=j.bookid)}}" class="edit">Edit</a>&nbsp;&nbsp;
+        <a href="{{url_for('deleteBook',author_id=author.id,book_id=j.bookid)}}" class="delete">Delete</a>
+    </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    {% endfor %}
+{% endblock %}
